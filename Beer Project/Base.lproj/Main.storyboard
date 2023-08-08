@@ -1,24 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Beer View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BeerViewController" id="BYZ-38-t0r" customClass="BeerViewController" customModule="Beer_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tse-3U-tkn">
+                                <rect key="frame" x="120" y="99" width="153" height="35"/>
+                                <color key="backgroundColor" red="0.93262296915054321" green="0.90509241819381714" blue="0.69073331356048584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="맥주 한 캔 ? 🍺"/>
+                                <connections>
+                                    <action selector="beerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uL4-q2-RYJ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ccO-p0-uBv">
+                                <rect key="frame" x="90" y="184" width="213" height="243.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ccO-p0-uBv" secondAttribute="height" multiplier="7:8" id="98d-JU-NFI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1u-0J-eUJ">
+                                <rect key="frame" x="20" y="467.33333333333331" width="353" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SS7-ZV-obj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7rw-K0-cPX">
+                                <rect key="frame" x="70" y="547.33333333333337" width="253" height="190"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7rw-K0-cPX" secondAttribute="height" multiplier="4:3" id="1fI-iA-alZ"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="L1u-0J-eUJ" secondAttribute="trailing" constant="20" id="0Rs-Al-1n7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ccO-p0-uBv" secondAttribute="trailing" constant="90" id="Bqp-Kk-mOU"/>
+                            <constraint firstItem="tse-3U-tkn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Ek0-S0-RRD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tse-3U-tkn" secondAttribute="trailing" constant="120" id="J4G-PB-AaQ"/>
+                            <constraint firstItem="L1u-0J-eUJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LeX-dH-h4h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7rw-K0-cPX" secondAttribute="trailing" constant="70" id="NHL-Il-AbP"/>
+                            <constraint firstItem="L1u-0J-eUJ" firstAttribute="top" secondItem="ccO-p0-uBv" secondAttribute="bottom" constant="40" id="NaS-hb-HKX"/>
+                            <constraint firstItem="7rw-K0-cPX" firstAttribute="top" secondItem="L1u-0J-eUJ" secondAttribute="bottom" constant="50" id="PSg-V1-ca6"/>
+                            <constraint firstItem="ccO-p0-uBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="R1Z-Sj-P34"/>
+                            <constraint firstItem="tse-3U-tkn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="Vya-Nl-8BK"/>
+                            <constraint firstItem="ccO-p0-uBv" firstAttribute="top" secondItem="tse-3U-tkn" secondAttribute="bottom" constant="50" id="gcI-0O-YtV"/>
+                            <constraint firstItem="7rw-K0-cPX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="haP-2K-Vmh"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="beerDescription" destination="7rw-K0-cPX" id="i7h-MN-gCn"/>
+                        <outlet property="beerImageView" destination="ccO-p0-uBv" id="cCP-4z-873"/>
+                        <outlet property="beerLabel" destination="L1u-0J-eUJ" id="HbZ-U6-QbB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
