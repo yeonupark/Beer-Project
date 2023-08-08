@@ -19,6 +19,7 @@
 		487A83662A827DBF00953B88 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487A83652A827DBF00953B88 /* APIKey.swift */; };
 		487A83682A827DDF00953B88 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 487A83672A827DDF00953B88 /* .gitignore */; };
 		487A836B2A8283BF00953B88 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 487A836A2A8283BF00953B88 /* Kingfisher */; };
+		487A836D2A82864100953B88 /* LotteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487A836C2A82864100953B88 /* LotteryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		487A835D2A827C3900953B88 /* BeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewController.swift; sourceTree = "<group>"; };
 		487A83652A827DBF00953B88 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		487A83672A827DDF00953B88 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		487A836C2A82864100953B88 /* LotteryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LotteryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				487A834B2A827A4000953B88 /* SceneDelegate.swift */,
 				487A834D2A827A4000953B88 /* ViewController.swift */,
 				487A834F2A827A4000953B88 /* Main.storyboard */,
+				487A836C2A82864100953B88 /* LotteryViewController.swift */,
 				487A835D2A827C3900953B88 /* BeerViewController.swift */,
 				487A83652A827DBF00953B88 /* APIKey.swift */,
 				487A83672A827DDF00953B88 /* .gitignore */,
@@ -168,6 +171,7 @@
 				487A835E2A827C3900953B88 /* BeerViewController.swift in Sources */,
 				487A834E2A827A4000953B88 /* ViewController.swift in Sources */,
 				487A834A2A827A4000953B88 /* AppDelegate.swift in Sources */,
+				487A836D2A82864100953B88 /* LotteryViewController.swift in Sources */,
 				487A834C2A827A4000953B88 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
